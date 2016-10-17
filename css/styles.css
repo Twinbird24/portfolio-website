@@ -1,0 +1,225 @@
+/* ========== Importing Google Fonts ========== */
+@import "https://fonts.googleapis.com/css?family=Abel";
+@import "https://fonts.googleapis.com/css?family=Cedarville+Cursive";
+
+/* ========== Setting up defaults ========== */
+body, html {
+  font-family: Abel;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+/* for making images black & white */
+img .desaturate {
+  filter: grayscale(100%);
+}
+
+/* ========== Parallax background for the main section ========== */
+.parallax { 
+  background-image: url("../img/main_header_background.jpg");
+  /*https://hd.unsplash.com/photo-1445160434759-194e6bc68ff6*/
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* ========== Home Text ========== */
+/* home text CSS animations -- start */
+@keyframes homeTextInRight {
+  from    { left: 100px; opacity: 0.0;}
+  to      { left: 0; opacity: 1.0;}
+}
+@keyframes homeTextInRight2 {
+  from    { left: 80px; opacity: 0.0;}
+  to      { left: 0; opacity: 1.0;}
+}
+@keyframes homeTextInLeft {
+  from    { right: 100px; opacity: 0.0;}
+  to      { right: 0; opacity: 1.0;}
+}
+/* home text CSS animations -- end */
+#targetTxt2 {
+  visibility: hidden;
+  bottom: 51px;
+  right: 13px;
+}
+#targetTxt3 {
+  visibility: hidden;
+  bottom: 102px;
+  right: 18px;
+}
+#home_text h1, #home_text h3, #home_text h4 {
+  position: relative;
+}
+#home_text h1 {
+  font-size: 3em;
+  animation: homeTextInRight 1.2s ease-out;
+}
+#home_text h3,  #home_text h4 {
+  margin: 0 0 5px 0;
+}
+#home_text h3 {
+  animation: homeTextInLeft 1.6s ease-out;
+}
+#home_text h4 {
+  font-size: 1.5em;
+  padding-right: 65px;
+  animation: homeTextInRight2 1.4s ease-out;
+}
+#home_text {
+  width: 100%;
+  text-align: right;
+}
+#home_text>div>h3 {
+  font-size: 2.5em;
+  text-align: right;
+  color: orange;
+  margin: 0;
+  padding: 0 25px 0 0;
+}
+#home_text span {
+  color: orange;
+}
+#text_cont {
+  padding: 50px 15%;
+}
+
+
+/* ========== Main About ========== */
+#main-about {
+  background-color: white;
+}
+#main-about span {
+  font-size: 1.2em;
+  line-height: 5px;
+  font-family: "Cedarville Cursive";
+}
+#main-about {
+  text-align: justify;
+  padding: 0 11vw;
+}
+#main-about h1 {
+  margin: 0;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+#main-about p {
+  margin: 0;
+  padding-bottom: 30px;
+  font-size: 1.1em;
+}
+
+
+/* ========== Project Header ========== */
+#proj-header {
+  background-image: url("../img/project_header_background.jpg");
+  /*https://hd.unsplash.com/photo-1468499419136-228128db8f7a*/
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+}
+#proj-header h1 {
+  text-align: center;
+  color: white;
+  padding-top: 25px;
+  margin: 0;
+}
+
+
+/* ========== Projects ========== */
+/* Grid set up with flex-box -- start */
+#grid {
+  padding: 25px 11vw;
+  flex-flow: row wrap-reverse; 
+  display: flex;
+  background-color: white;
+}
+.item {
+  flex: auto; 
+  width: 200px; 
+  margin: 1vw; 
+}
+.item img {
+  width: 100%; 
+  height: auto; 
+}
+/* Grid set up with flex-box -- end */
+
+
+/* ========== My Services/ What I have to offer ========== */
+#my_services_header h1 {
+  text-align: center;
+  color: white;
+  padding-top: 25px;
+  margin: 0;
+}
+#my_services_header {
+  background-image: url("../img/services_header_background.jpg");
+  /*https://hd.unsplash.com/photo-1431794015670-1761ebb156ba*/
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+}
+#my_services h3 {
+  text-align: center;
+}
+#icon_holder {
+  text-align: center;
+  padding-top: 35px;
+}
+#my_services {
+  margin-bottom: 100px;
+  padding: 0 2%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+#my_services>div {
+  flex: auto;
+  width: 30%;
+  margin: 0 3%;
+  padding-bottom: 2vh;
+}
+#my_services div p {
+  font-size: 1.1em;
+}
+
+
+/* ========== Footer and below footer ========== */
+footer {
+  height: 100px;
+  width: 100%;
+  background: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}
+#left_foot {
+  float: left;
+  height: 100%;
+  margin-left: 10vw;
+  display: flex;
+  align-items: center;
+}
+#right_foot {
+  float: right;
+  height: 100%;
+  margin-right: 10vw;
+  display: flex;
+  align-items: center;
+}
+#right_foot div {
+  margin-left: 30px;
+  text-align: center;
+}
+#left_foot div {
+  text-align: center;
+}
