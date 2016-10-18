@@ -80,4 +80,18 @@ $(document).ready(function() {
 		});
 	}
 
+	// running specific animations based on scroll position
+	var waypoint1 = new Waypoint({
+		element: document.getElementById('main-about'),
+		handler: function() {
+	    	scrollFade1();
+	    	this.destroy();
+	    },
+	    offset: '70%'
+	})
+	function scrollFade1() {
+		console.log('scrollFade1');
+		$('#main-about>h1, #main-about>p').addClass('animated fadeInUp');
+	}
+
 });
