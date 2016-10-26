@@ -2,7 +2,7 @@
 @import "https://fonts.googleapis.com/css?family=Abel";
 @import "https://fonts.googleapis.com/css?family=Cedarville+Cursive";
 
-/* ========== Setting up defaults ========== */
+/* ========== Setting up defaults/ general styles ========== */
 body, html {
   font-family: Abel;
   height: 100%;
@@ -15,6 +15,12 @@ body {
 /* for making images black & white */
 img .desaturate {
   filter: grayscale(100%);
+}
+/* stripping away anchor tag default styles */
+a {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
 }
 
 /* ========== Parallax background for the main section ========== */
@@ -154,6 +160,12 @@ img .desaturate {
   height: auto; 
 }
 /* Grid set up with flex-box -- end */
+#grid>div {
+  opacity: 0; /* setting opacity initially to 0, will be faded in on scroll */
+}
+#grid img {
+  cursor: pointer;
+}
 
 
 /* ========== My Services/ What I have to offer ========== */
@@ -172,9 +184,11 @@ img .desaturate {
   height: 100px;
 }
 #my_services h3 {
+  opacity: 0; /* setting opacity initially to 0, will be faded in on scroll */
   text-align: center;
 }
 #icon_holder {
+  opacity: 0; /* setting opacity initially to 0, will be faded in on scroll */
   text-align: center;
   padding-top: 35px;
 }
@@ -192,6 +206,7 @@ img .desaturate {
   padding-bottom: 2vh;
 }
 #my_services div p {
+  opacity: 0; /* setting opacity initially to 0, will be faded in on scroll */
   font-size: 1.1em;
 }
 
@@ -223,7 +238,129 @@ footer {
 #right_foot div {
   margin-left: 30px;
   text-align: center;
+  cursor: pointer;
+  transition: color 200ms; /* the transition is applied to the color only, at a speed of 200ms */
+}
+#right_foot div:hover {
+  color: orange;
 }
 #left_foot div {
   text-align: center;
+  cursor: pointer;
+  transition: color 200ms; /* the transition is applied to the color only, at a speed of 200ms */
+}
+#left_foot div:hover { 
+  color: orange;
+}
+
+/* ========== E-mail pop-up form ========== */
+/* outer portion of pop-up form */
+#pop-up {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.75); /* using RGBA color values to enable transparency */
+}
+/* inner/ main part of the pop-up */
+#popup-inner {
+  max-width: 700px;
+  width: 90%;
+  padding: 20px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 6px rgba(0,0,0,1);
+  border-radius: 3px;
+  background: #fff; /*white*/
+}
+/* the close "x" button */
+#popup-closeX {
+  width: 30px;
+  height: 25.5px;
+  padding-top: 4px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  transition: ease 0.25s;
+  border-radius: 100%;
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+} 
+#popup-closeX:hover {
+  transform: rotate(180deg);
+  background: rgba(0,0,0,1);
+}
+#popup-closeC {
+  cursor: pointer;
+  display: inline-block; /* inline-block elements are like inline elements but they can have a width and a height */
+  border-bottom: 2px solid transparent;    
+  width: 0px; 
+  transition: ease 0.5s;
+  margin-left: 12px;
+}
+#popup-closeC:hover {
+  border-bottom: 2px solid black;
+  width: 33px;
+}
+textarea {
+  height: 200px;
+  resize: vertical;
+}
+input[type="submit"] {
+  margin-left: 0;
+  background: none;
+  width: 60px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  border: 2px solid black;
+  background: black;
+  color: white;
+}
+input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 5px 0 5px 0;
+  border: 2px solid grey;
+  padding: 10px;
+  font-family: Abel;
+  font-size: 18px;
+  transition: ease 0.5s;
+}
+input:focus, textarea:focus { 
+  outline: none;
+  border: 2px solid black;
+}
+input#name {
+  background-image: url("../img/message_icons/user.png");
+  background-repeat: no-repeat;
+  background-position: 5px 4px;
+  padding-left: 50px;
+}
+input#email {
+  background-image: url("../img/message_icons/envelope.png");
+  background-repeat: no-repeat;
+  background-position: 5px 4px;
+  padding-left: 50px;
+}
+textarea#message {
+  background-image: url("../img/message_icons/pencil.png");
+  background-repeat: no-repeat;
+  background-position: 5px 4px;
+  padding-left: 50px;
+}
+#name_wrapper {
+  float: left;
+  width:49.5%;
+}
+#email_wrapper {
+  float: right;
+  width:49.5%;
 }

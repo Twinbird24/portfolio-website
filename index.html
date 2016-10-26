@@ -66,30 +66,52 @@
 	<div>
 		<div id="icon_holder"><i class="fa fa-desktop fa-5x" aria-hidden="true"></i></div>
 		<h3>Web Design &amp; Development</h3>
-		<p>Need a new website for your rock collection? I love designing unique websites and developing interactive applications. Whether it's a simple static website or a full-stack project&mdash;using my professional knowledge of front-end and back-end technologies, I'm happy to craft an idea into a masterpiece. I'll even make it work in Internet Explorer (if I really have to).</p>
+		<p id="left_p">Need a new website for your rock collection? I love designing unique websites and developing interactive applications. Whether it's a simple static website or a full-stack project&mdash;using my professional knowledge of front-end and back-end technologies, I'm happy to craft an idea into a masterpiece. I'll even make it work in Internet Explorer (if I really have to).</p>
 	</div>
 	<div>
 		<div id="icon_holder"><i class="fa fa-check-circle-o fa-5x" aria-hidden="true"></i></div>
 		<h3>Up to Date</h3>
-		<p>Web development is a very dynamic field, not only are there at least a billion jQuery plugins and JavaScript libraries, but there's also a lot of different types of coffee I can drink. Choosing the right tools and the right coffee is very important. I am constantly learning, whether by networking with fellow developers, reading a new book, or enrolled in a course online.</p>
+		<p id="middle_p">Web development is a very dynamic field, not only are there at least a billion jQuery plugins and JavaScript libraries, but there's also a lot of different types of coffee I can drink. Choosing the right tools and the right coffee is very important. I am constantly learning, whether by networking with fellow developers, reading a new book, or enrolled in a course online.</p>
 	</div>
 	<div>
 		<div id="icon_holder"><i class="fa fa-smile-o fa-5x" aria-hidden="true"></i></div>
 		<h3>Creative &amp; Enthusiastic</h3>
-		<p>Coding is fun! That's the entire reason I'm here&mdash;in fact, you'll often find me on Codewars taking on new coding challenges, or on Reddit reading about cool things going on in the world of web development. Being excited about web development isn't the only thing that keeps me alive, it's the creativity&mdash;being able to turn any idea into reality, and I'm always thinking of new ideas that I can bring to life.</p>
+		<p id="right_p">Coding is fun! That's the entire reason I'm here&mdash;in fact, you'll often find me on Codewars taking on new coding challenges, or on Reddit reading about cool things going on in the world of web development. Being excited about web development isn't the only thing that keeps me alive, it's the creativity&mdash;being able to turn any idea into reality, and I'm always thinking of new ideas that I can bring to life.</p>
 	</div>
 </div>
 
 <footer>
 	<div id="left_foot">
-		<div><i class="fa fa-paper-plane" aria-hidden="true"></i><br>Send me a message</div>
+		<div id="send_msg_btn"><i class="fa fa-paper-plane" aria-hidden="true"></i><br>Send me a message</div>
 	</div>
 	<div id="right_foot">
-		<div><i class="fa fa-linkedin" aria-hidden="true"></i><br>LinkedIn</div>
-		<div><i class="fa fa-github" aria-hidden="true"></i><br>GitHub</div>
-		<div><i class="fa fa-codepen" aria-hidden="true"></i><br>CodePen</div>
+		<a href="https://ca.linkedin.com/in/attila-komaromi-58630217" target="_blank"><div><i class="fa fa-linkedin" aria-hidden="true"></i><br>LinkedIn</div></a>
+		<a href="https://github.com/Twinbird24" target="_blank"><div><i class="fa fa-github" aria-hidden="true"></i><br>GitHub</div></a>
+		<a href="http://codepen.io/attkom/" target="http://codepen.io/attkom/"><div><i class="fa fa-codepen" aria-hidden="true"></i><br>CodePen</div></a>
 	</div>
 </footer>
+
+<!-- ========== Our e-mail form pop-up ========== -->
+<div id="pop-up">
+    <div id="popup-inner">
+        <h2>Send me a message.</h2>
+	        <form action="https://formspree.io/attila.kom@gmail.com" method="POST">
+	        	<div id="name_wrapper">
+	    			<input id="name" placeholder="Name" name="name" type="text" required>
+	    		</div>
+	    		<div id="email_wrapper">
+	    			<input id="email" placeholder="E-mail" name="e-mail" type="email" required>
+	    		</div>
+	        	<textarea id="message" name="message" cols="30" rows="10" placeholder="Enter your message here"></textarea required>
+	        	<input type="hidden" name="_subject" value="Message from Portfolio Website" />
+	        	<input type="text" name="_format" value="plain" style="display:none" />
+	        	<input type="submit" value="send">
+	        </form>
+        <p><a id="popup-closeC">Close</a></p>
+        <a id="popup-closeX"><i class="fa fa-times" aria-hidden="true"></i></a>
+    </div>
+</div>
+<!-- ========== E-mail form pop-up end ========== -->
 
 
 <!-- Linking scripting tags -->
