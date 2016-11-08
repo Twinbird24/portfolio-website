@@ -1,9 +1,10 @@
 $(document).ready(function() {
-	console.log('script started');
+	//console.log('script started');
 
 	// 1: main header animations
 	// 2: scroll-triggered handlers
 	// 3: e-mail pop-up
+	// 4: project items' effects
 
 	// --1-- // --- main header animations *start* --- //
 	var fadeTime = 200; // set the time between header animations
@@ -99,7 +100,7 @@ $(document).ready(function() {
 	    offset: '70%' // the handler will execute when the selected element is 70% (for example) from the top of the viewport
 	})
 	function scrollFade1() {
-		console.log('scrollFade1');
+		//console.log('scrollFade1');
 		$('#main-about>h1, #main-about>p').addClass('animated fadeInUp'); // using the animate.css library, we fade the element in and up
 	}
 
@@ -113,7 +114,7 @@ $(document).ready(function() {
 	    offset: '70%'
 	})
 	function scrollFade2() {
-		console.log('scrollFade2');
+		//console.log('scrollFade2');
 		$('#grid>div').addClass('animated fadeInUp');
 	}
 
@@ -127,7 +128,7 @@ $(document).ready(function() {
 	    offset: '70%'
 	})
 	function scrollFade3() {
-		console.log('scrollFade3');
+		//console.log('scrollFade3');
 		$('#my_services h3, #icon_holder').addClass('animated fadeIn');
 	}
 
@@ -141,7 +142,7 @@ $(document).ready(function() {
 	    offset: '60%'
 	})
 	function scrollFade4() {
-		console.log('scrollFade4 - left <p>');
+		//console.log('scrollFade4 - left <p>');
 		$('#left_p').addClass('animated fadeInLeft');
 	}
 
@@ -155,7 +156,7 @@ $(document).ready(function() {
 	    offset: '60%'
 	})
 	function scrollFade5() {
-		console.log('scrollFade5 - middle <p>');
+		//console.log('scrollFade5 - middle <p>');
 		$('#middle_p').addClass('animated fadeInUp');
 	}
 
@@ -169,7 +170,7 @@ $(document).ready(function() {
 	    offset: '60%'
 	})
 	function scrollFade6() {
-		console.log('scrollFade6 - right <p>');
+		//console.log('scrollFade6 - right <p>');
 		$('#right_p').addClass('animated fadeInRight');
 	}
 	// --- running specific animations based on scroll position *end* --- //
@@ -178,7 +179,7 @@ $(document).ready(function() {
 	// --3-- // --- handling the click event for the message button *start* --- //
 	// open the pop-up
 	$('#send_msg_btn').click(function() {
-		console.log('Send message button clicked');
+		//console.log('Send message button clicked');
 		$('#pop-up').fadeIn('fast');
 	});
 
@@ -187,5 +188,18 @@ $(document).ready(function() {
 	       $('#pop-up').fadeOut('fast');
 	});
 	// --- handling the click event for the message button *end* --- //
+
+
+	// --4-- // --- project hover effects *start* --- //
+	$('.item').hover(
+		function() {
+	    	$(this).removeClass('desaturate'); // bring colour back to image
+	    	$(this).find('div').fadeTo('fast', 1); // fade in header
+		}, function() {
+			$(this).addClass('desaturate'); // make image black-and-white again
+			$(this).find('div').fadeTo('fast', 0); // fade out header
+		}
+	);
+	// --- project hover effects *end* --- //
 
 });

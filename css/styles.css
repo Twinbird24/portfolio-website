@@ -13,7 +13,7 @@ body {
   height: 100%;
 }
 /* for making images black & white */
-img .desaturate {
+.desaturate {
   filter: grayscale(100%);
 }
 /* stripping away anchor tag default styles */
@@ -151,20 +151,35 @@ a {
   background-color: white;
 }
 .item {
+  position: relative;
   flex: auto; 
   width: 200px; 
-  margin: 1vw; 
+  margin: 1vw;
+  cursor: pointer;
+  transition: all 300ms; /*So the css rules (mainly the grayscale styles) get animated in/out*/
 }
 .item img {
   width: 100%; 
-  height: auto; 
+  height: auto;
 }
 /* Grid set up with flex-box -- end */
 #grid>div {
   opacity: 0; /* setting opacity initially to 0, will be faded in on scroll */
 }
-#grid img {
-  cursor: pointer;
+.item>div {
+  position: absolute; 
+  top: 0px; 
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.item>div>h3 {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 

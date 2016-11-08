@@ -32,11 +32,14 @@
 <!-- ========== Our projects grid ========== -->
 <div id="grid">
 	<!-- All images in this grid should have a 7:4 aspect ratio -->
-	<div class="item">
-		<img src="http://placehold.it/700x400">
+	<div class="item desaturate">
+		<img src="img/project_imgs/proj1.png">
+		<div>
+			<h3>Corporate Affairs</h3>
+		</div>
 	</div>
-	<div class="item">
-		<img src="http://placehold.it/700x400">
+	<div class="item desaturate">
+		<img src="img/project_imgs/proj2.png">
 	</div>
 	<div class="item">
 		<img src="http://placehold.it/700x400">
@@ -104,7 +107,10 @@
 	    		</div>
 	        	<textarea id="message" name="message" cols="30" rows="10" placeholder="Enter your message here"></textarea required>
 	        	<input type="hidden" name="_subject" value="Message from Portfolio Website" />
+	        	<!-- _format allows for me to receive plain text versions of emails for form submissions -->
 	        	<input type="text" name="_format" value="plain" style="display:none" />
+	        	<!-- _gotach is to prevent spam, if a value is provided, the submission will be silently ignored -->
+	        	<input type="text" name="_gotcha" style="display:none" />
 	        	<input type="submit" value="send">
 	        </form>
         <p><a id="popup-closeC">Close</a></p>
