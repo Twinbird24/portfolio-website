@@ -183,7 +183,7 @@ $(document).ready(function() {
 		$('#pop-up').fadeIn('fast');
 	});
 
-	// close the pop-up.
+	// close the pop-up
 	$('#popup-closeC, #popup-closeX').click(function() {
 	       $('#pop-up').fadeOut('fast');
 	});
@@ -200,6 +200,15 @@ $(document).ready(function() {
 			$(this).find('div').fadeTo('fast', 0); // fade out header
 		}
 	);
+
+	// open pop-up for clicked project
+	$('.item').click(function() {
+		$('#proj_pop-up').fadeIn('fast');
+	});
+	// close the project pop-up
+	$('#proj_popup-closeC, #proj_popup-closeX').click(function() {
+	       $('#proj_pop-up').fadeOut('fast');
+	});
 	// --- project hover effects *end* --- //
 
 });
