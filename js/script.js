@@ -5,6 +5,7 @@ $(document).ready(function() {
 	// 2: scroll-triggered handlers
 	// 3: e-mail pop-up
 	// 4: project items' effects
+	// 5: nav menu click and scroll handlers
 
 	// --1-- // --- main header animations *start* --- //
 	var fadeTime = 200; // set the time between header animations
@@ -203,12 +204,45 @@ $(document).ready(function() {
 
 	// open pop-up for clicked project
 	$('.item').click(function() {
-		$('#proj_pop-up').fadeIn('fast');
+		// load the data from external html document via ajax
+		$('#fade_container').load($(this).data('source'), function() {
+			// contents are faded in
+			$('#proj_pop-up').fadeIn('fast');
+		});
 	});
 	// close the project pop-up
 	$('#proj_popup-closeC, #proj_popup-closeX').click(function() {
 	       $('#proj_pop-up').fadeOut('fast');
 	});
 	// --- project hover effects *end* --- //
+
+
+	// --5-- // --- nav menu click and scroll *start* --- //
+	$('#logo').mouseup(function() {
+		$.scrollTo('0', 300);
+	});
+	$('#li_1').mouseup(function() {
+		$.scrollTo('#main-about', 300, {offset: -70});
+	});
+	$('#li_2').mouseup(function() {
+		$.scrollTo('#proj-header', 300, {offset: -70});
+	});
+	$('#li_3').mouseup(function() {
+		$.scrollTo('#my_services_header', 300, {offset: -70});
+	});
+	// waypoint for animating-in/out the nav menu
+	var waypoint7 = new Waypoint({
+		element: document.getElementById('targetTxt3'),
+		handler: function(direction) {
+			console.log(direction)
+			if(direction == 'down') {
+				$('nav').animate({top: "0", opacity: 1}, 300);
+			} else {
+				$('nav').animate({top: "-80", opacity: 0}, 300);
+			}
+	    },
+	    offset: '60'
+	})
+	// --- nav menu click and scroll *end* --- //
 
 });

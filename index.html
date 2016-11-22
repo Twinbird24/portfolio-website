@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Attila Komaromi</title>
+	<!-- Custom stylesheet -->
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -10,6 +11,21 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body>
+
+<!-- ========== Nav bar ========== -->
+<nav>
+	<div id="logo">
+		<img src="img/logo.png">
+	</div>
+	<ul>
+		<li id="li_1"><a>About Me</a></li>
+		<li id="li_2"><a>Projects</a></li>
+		<li id="li_3"><a>What I can offer</a></li>
+	</ul>
+</nav>
+<!-- ========== Nav bar end ========== -->
+
+<!-- ========== Header animation text ========== -->
 <div id="home_text" class="parallax">
 	<div id="text_cont">
 		<h1><span>Attila</span> Komaromi</h1>
@@ -19,49 +35,50 @@
 		<h3 id="targetTxt3">Innovative</h3>
 	</div>
 </div>
+<!-- ========== Header animation text end ========== -->
 
+<!-- ========== About me ========== -->
 <div id="main-about">
 	<h1>About Me</h1>
 	<p><span>Hey!</span> my name is Attila and I'm a web developer. Ever since I was a child I have been interested in technology — I built my first desktop when I was only 11 years old. Eventually, I became so good at fixing computer issues that I started my own small home business fixing PCs for neighbours! I got my first taste of development and design when I started playing around with Flash and Actionscript in grade school and early highschool. I created a lot of cool animations as well as a few Flash games. However, come time for matriculation, I decided to study biology. After 5 years of study, I realized biology is a field I did not want to pursue as a career, and here I am today working on what I truly enjoy — transforming coffee into creative web applications.<br><br>
 	As a developer, I'm constantly learning new technologies and looking for ways to challenge myself and expand my horizon. Feel free to browse through some of the things I've created (or currently working on) in my portfolio, or click on the links below in the footer to check out my other online profiles, and don't hesitate to send me a message if you'd like to grab some beers or just have a chat!</p>
 </div>
+<!-- ========== About me end ========== -->
 
 <div id="proj-header">
 	<h1>Projects</h1>
 </div>
 <!-- ========== Our projects grid ========== -->
 <div id="grid">
-	<!-- All images in this grid should have a 7:4 aspect ratio -->
-	<div class="item desaturate">
+	<!-- All images in this grid should have a 7:4 (width:height) aspect ratio, i.e. 1400px by 800px -->
+	<div class="item desaturate" data-source="proj_sources/proj1.html">
 		<img src="img/project_imgs/proj1.png">
 		<div>
 			<h3>Corporate Affairs</h3>
 		</div>
 	</div>
-	<div class="item desaturate">
+	<div class="item desaturate" data-source="proj_sources/proj2.html">
 		<img src="img/project_imgs/proj2.png">
+		<div>
+			<h3>Aranka Csárda</h3>
+		</div>
 	</div>
-	<div class="item">
-		<img src="http://placehold.it/700x400">
+	<div class="item desaturate" data-source="proj_sources/proj3.html">
+		<img src="img/project_imgs/proj3.png">
+		<div>
+			<h3>Google Homepage</h3>
+		</div>
 	</div>
-	<div class="item">
-		<img src="http://placehold.it/700x400">
-	</div>
-	<div class="item">
-		<img src="http://placehold.it/700x400">
-	</div>
-	<div class="item">
-		<img src="http://placehold.it/700x400">
-	</div>
-	<div class="item">
-		<img src="http://placehold.it/700x400">
-	</div>
-	<div class="item">
-		<img src="http://placehold.it/700x400">
+	<div class="item desaturate" data-source="proj_sources/proj4.html">
+		<img src="img/project_imgs/proj4.png">
+		<div>
+			<h3>Circle Sounds</h3>
+		</div>
 	</div>
 </div>
 <!-- ========== Our projects grid end ========== -->
 
+<!-- ========== What I can offer section ========== -->
 <div id="my_services_header">
 	<h1>What I can offer</h1>
 </div>
@@ -82,7 +99,9 @@
 		<p id="right_p">Coding is fun! That's the entire reason I'm here&mdash;in fact, you'll often find me on Codewars taking on new coding challenges, or on Reddit reading about cool things going on in the world of web development. Being excited about web development isn't the only thing that keeps me alive, it's the creativity&mdash;being able to turn any idea into reality, and I'm always thinking of new ideas that I can bring to life.</p>
 	</div>
 </div>
+<!-- ========== What I can offer end ========== -->
 
+<!-- ========== Footer ========== -->
 <footer>
 	<div id="left_foot">
 		<div id="send_msg_btn"><i class="fa fa-paper-plane" aria-hidden="true"></i><br>Send me a message</div>
@@ -93,6 +112,7 @@
 		<a href="http://codepen.io/attkom/" target="http://codepen.io/attkom/"><div><i class="fa fa-codepen" aria-hidden="true"></i><br>CodePen</div></a>
 	</div>
 </footer>
+<!-- ========== Footer end ========== -->
 
 <!-- ========== Our e-mail form pop-up ========== -->
 <div id="pop-up">
@@ -122,6 +142,7 @@
 <!-- ========== Project pop-up ========== -->
 <div id="proj_pop-up">
     <div id="proj_popup-inner">
+    	<div id="fade_container"></div>
 		<p><a id="proj_popup-closeC">Close</a></p>
 		<a id="proj_popup-closeX"><i class="fa fa-times" aria-hidden="true"></i></a>
     </div>
@@ -137,6 +158,8 @@
 <script src="js/jquery.textillate.js"></script>
 <!-- JS library executing a function whenever you scroll to an element -->
 <script src="js/noframework.waypoints.min.js"></script>
+<!-- jQuery scrollTo plugin (by flesler) for easy nav scrolling -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 <!-- Custom script.js for page -->
 <script src="js/script.js"></script>
 </body>
