@@ -478,3 +478,55 @@ nav>ul>li {
 nav>ul>li:hover {
   color: orange;
 }
+
+/* ========== Responsive styles ========== */
+@media only screen and (max-width: 500px) {
+
+    #home_text>div>h3 {
+      font-size: 2em;
+    }
+    #home_text h4 {
+      padding-bottom: 10px;
+    }
+    #home_text>div>h3 {
+      padding-top: 5px;
+    }
+    #text_cont {
+      padding: 0 4%;
+    }
+    #logo {
+      padding-left: 0;
+    }
+    #logo>img {
+      width: 100%;
+    }
+    nav>ul {
+      margin: 0;
+      font-size: 0.97em;
+      width: 100%;
+    }
+    nav {
+      height: 150px;
+    }
+    #my_services {
+      display: block;
+      margin-bottom: 200px;
+    }
+    #my_services div {
+      width: auto;
+    }
+    footer {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    footer #left_foot {
+      margin: 0 0 35px 0;
+    }
+    footer #left_foot, footer #right_foot{
+      height: initial;
+    }
+
+}

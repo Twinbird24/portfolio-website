@@ -222,13 +222,13 @@ $(document).ready(function() {
 		$.scrollTo('0', 300);
 	});
 	$('#li_1').mouseup(function() {
-		$.scrollTo('#main-about', 300, {offset: -70});
+		$.scrollTo('#main-about', 300, {offset: -75});
 	});
 	$('#li_2').mouseup(function() {
-		$.scrollTo('#proj-header', 300, {offset: -70});
+		$.scrollTo('#proj-header', 300, {offset: -75});
 	});
 	$('#li_3').mouseup(function() {
-		$.scrollTo('#my_services_header', 300, {offset: -70});
+		$.scrollTo('#my_services_header', 300, {offset: -75});
 	});
 	// waypoint for animating-in/out the nav menu
 	var waypoint7 = new Waypoint({
