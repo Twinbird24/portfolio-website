@@ -502,7 +502,7 @@ nav>ul>li:hover {
     }
     nav>ul {
       margin: 0;
-      font-size: 0.97em;
+      font-size: 0.95em;
       width: 100%;
     }
     nav {
@@ -530,3 +530,5 @@ nav>ul>li:hover {
     }
 
 }
+
+/* copyright 2016 Attila Komaromi */
