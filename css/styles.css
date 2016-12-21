@@ -526,6 +526,9 @@ nav>ul>li:hover {
     footer #left_foot, footer #right_foot{
       height: initial;
     }
+    nav div#logo, #logo>img {
+      width: 300px;
+    }
 
 }
 
