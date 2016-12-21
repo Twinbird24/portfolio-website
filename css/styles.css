@@ -267,6 +267,13 @@ footer {
 #left_foot div:hover { 
   color: orange;
 }
+#sub_footer {
+    background-color: blue;
+    position: relative;
+    bottom: 200px;
+    opacity: 0;
+    z-index: -2;
+}
 
 /* ========== E-mail pop-up form ========== */
 /* outer portion of pop-up form (same styles for the project pop-up as well) */
@@ -494,19 +501,10 @@ nav>ul>li:hover {
     #text_cont {
       padding: 0 4%;
     }
-    #logo {
-      padding-left: 0;
-    }
-    #logo>img {
-      width: 100%;
-    }
     nav>ul {
       margin: 0;
       font-size: 0.95em;
       width: 100%;
-    }
-    nav {
-      height: 150px;
     }
     #my_services {
       display: block;
@@ -528,10 +526,29 @@ nav>ul>li:hover {
     footer #left_foot, footer #right_foot{
       height: initial;
     }
-    footer {
-      position: static;
-    }
 
+}
+
+@media only screen and (max-width: 819px) {
+    
+    nav>ul>li {
+      display: inline-block;
+      float: none;
+    }
+    nav>ul {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
+    nav {
+      height: 150px;
+    }
+    #logo {
+      width: 350px;
+      margin: 0 auto;
+      padding-left: 0;
+      float: none;
+    }
 }
 
 /* copyright 2016 Attila Komaromi */
