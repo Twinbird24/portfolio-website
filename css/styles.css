@@ -528,6 +528,9 @@ nav>ul>li:hover {
     footer #left_foot, footer #right_foot{
       height: initial;
     }
+    footer {
+      position: static;
+    }
 
 }
 
