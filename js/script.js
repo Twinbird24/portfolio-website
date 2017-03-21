@@ -1,5 +1,8 @@
-$(document).ready(function() {
+$(window).on('load', function() {
 	//console.log('script started');
+
+	// remove preloader
+	$('.pre-load').fadeOut();
 
 	// 1: main header animations
 	// 2: scroll-triggered handlers
