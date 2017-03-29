@@ -65,18 +65,18 @@ a {
 }
 #home_text h1 {
   font-size: 3em;
-  animation: homeTextInRight 1.2s ease-out;
+  /*animation: homeTextInRight 1.2s ease-out; <-- added after loader*/
 }
 #home_text h3,  #home_text h4 {
   margin: 0 0 5px 0;
 }
 #home_text h3 {
-  animation: homeTextInLeft 1.6s ease-out;
+  /*animation: homeTextInLeft 1.6s ease-out; <-- added after loader*/
 }
 #home_text h4 {
   font-size: 1.5em;
   padding-right: 65px;
-  animation: homeTextInRight2 1.4s ease-out;
+  /*animation: homeTextInRight2 1.4s ease-out; <-- added after loader*/
 }
 #home_text {
   width: 100%;
@@ -144,7 +144,12 @@ a {
 
 /* ========== Projects ========== */
 /* Grid set up with flex-box -- start */
+#grid-container {
+  background: white;
+}
 #grid {
+  max-width: 892.5px;
+  margin: 0 auto;
   padding: 25px 11vw;
   flex-flow: row wrap-reverse; 
   display: flex;
@@ -153,7 +158,7 @@ a {
 .item {
   position: relative;
   flex: auto; 
-  width: 200px; 
+  width: 200px;
   margin: 1vw;
   cursor: pointer;
   transition: all 300ms; /*So the css rules (mainly the grayscale styles) get animated in/out*/

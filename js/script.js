@@ -3,6 +3,10 @@ $(window).on('load', function() {
 
 	// remove preloader
 	$('.pre-load').fadeOut();
+	// start intro text animations
+	$('#home_text h1').css('animation', 'homeTextInRight 1.2s ease-out');
+	$('#home_text h3').css('animation', 'homeTextInLeft 1.6s ease-out');
+	$('#home_text h4').css('animation', 'homeTextInRight2 1.4s ease-out');
 
 	// 1: main header animations
 	// 2: scroll-triggered handlers
